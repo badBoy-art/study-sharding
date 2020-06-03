@@ -5,6 +5,7 @@ import com.lc.sharding.init.Inits;
 import com.lc.sharding.mybatismapper.TOrderMapper;
 import com.lc.sharding.pojo.TOrder;
 import com.lc.sharding.pojo.TOrderExample;
+
 import org.apache.commons.collections4.CollectionUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +19,8 @@ import java.util.List;
 
 /**
  * Created by wanghh on 2018-7-25.
+ *
+ * <a href="https://mp.weixin.qq.com/s/swH-3HUtNo9TAFFGybYTTg"></a>
  */
 @RunWith(SpringJUnit4ClassRunner.class) // 使用junit4进行测试
 @ContextConfiguration({"classpath:applicationContext.xml"}) // 加载配置文件*/
@@ -59,6 +62,6 @@ public class UniqueIDUtilsTest {
         TOrderExample tOrderExampleUserId = new TOrderExample();
         tOrderExampleUserId.createCriteria().andUserIdEqualTo(9000019L);//存在主库中
         list = tOrderMapper.selectByExample(tOrderExampleUserId);
-        System.out.println("user_id:" + (list.size() > 0? true : false));
+        System.out.println("user_id:" + (list.size() > 0 ? true : false));
     }
 }

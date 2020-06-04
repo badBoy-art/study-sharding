@@ -35,7 +35,6 @@ public class UniqueIDUtilsTest {
 
     @Test
     public void bulidOrderIdTest() {
-
         UniqueIDUtils uniqueIDUtils = new UniqueIDUtils();
         TOrder tOrder = new TOrder();
         tOrder.setBusinessId(112L);
@@ -49,7 +48,6 @@ public class UniqueIDUtilsTest {
             tOrder.setId(orderId);
             int result = tOrderMapper.insert(tOrder);
         }
-
     }
 
     @Test
